@@ -1,6 +1,7 @@
 <h1 align='center'>Installation</h1>
-'''git clone https://github.com/ceaser008/nvim ~/.config/nvim --depth 1 && nvim'''
+<p style='italic'>  git clone https://github.com/ceaser008/nvim ~/.config/nvim --depth 1 && nvim</p>
 <br>
+
 <h1 align='center'>TREE STRUCTURE FOR CONFIG FILES</h1>
 .<br>
 ├── init.lua <br>
