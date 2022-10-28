@@ -1,13 +1,11 @@
-# nvim
-
-.
+<h1 align='center'>THE TREE STRUCTURE FOR NVIM CONFIG FILES</h1>
 ├── init.lua <br>
 ├── lua<br>
 │   ├── core<br>
 │   │   ├── colorscheme.lua<br>
 │   │   ├── keymaps.lua<br>
 │   │   └── options.lua<br>
-│   ├── packer-setup.lua<br><br>
+│   ├── packer-setup.lua<br>
 │   └── plugins<br>
 │   ├── autopairs.lua<br>
 │   ├── bufferline.lua<br>
