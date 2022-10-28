@@ -8,5 +8,5 @@ end
 -- local lualine_nightfly = require("lualine.themes.nightfly")
 
 lualine.setup({
-	options = { theme = "gruvbox" },
+	options = { theme = "auto" },
 })
