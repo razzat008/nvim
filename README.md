@@ -1,4 +1,5 @@
 <h1 align='center'>THE TREE STRUCTURE FOR NVIM CONFIG FILES</h1>
+.<br>
 ├── init.lua <br>
 ├── lua<br>
 │   ├── core<br>
