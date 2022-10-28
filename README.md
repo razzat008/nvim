@@ -1,4 +1,4 @@
-<h1 align='center'>THE TREE STRUCTURE FOR NVIM CONFIG FILES</h1>
+<h1 align='center'>TREE STRUCTURE FOR CONFIG FILES</h1>
 .<br>
 ├── init.lua <br>
 ├── lua<br>
@@ -28,3 +28,5 @@
 │   └── telescope.lua<br>
 └── plugin<br>
 └── packer_compiled.lua<br>
+<h3 align='center'>THIS IS HOW IT LOOKS WITH BASIC CUSTOMIZATION</h2>
+
