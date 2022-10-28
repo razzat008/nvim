@@ -30,3 +30,5 @@
 └── packer_compiled.lua<br>
 <h3 align='center'>THIS IS HOW IT LOOKS WITH BASIC CUSTOMIZATION</h2>
 
+![Screenshot_2022-10-28_08-55-56](https://user-images.githubusercontent.com/93041325/198494499-095f00fe-206f-4d9d-9f08-69349c7a1c45.png)
+
