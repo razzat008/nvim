@@ -4,6 +4,7 @@
 
 <h1 align='center'>TREE STRUCTURE FOR CONFIG FILES</h1>
 .<br>
+<p align='center'>
 .
 ├── init.lua
 ├── lua
@@ -34,6 +35,7 @@
 ├── plugin
 │   └── packer_compiled.lua
 └── README.md
+</p>
 <h3 align='center'>THIS IS HOW IT LOOKS WITH BASIC CUSTOMIZATION</h2>
 <br>
 
