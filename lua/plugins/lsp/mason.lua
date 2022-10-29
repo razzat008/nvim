@@ -1,6 +1,7 @@
 --import mason plugin safely
 local mason_status, mason = pcall(require, "mason")
 if not mason_status then
+	print("mason is fucked")
 	return
 end
 
@@ -35,7 +36,7 @@ mason.setup({
 mason_null_ls.setup({
 	-- list of formatters & linters for mason to install
 	ensure_installed = {
-		"prettier", -- ts/js formatter
+		"prettierd", -- ts/js formatter
 		"eslint_d", -- ts/js linter
 	},
 	-- auto-install configured formatters & linters (with null-ls)

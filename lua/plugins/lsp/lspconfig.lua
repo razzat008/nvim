@@ -55,6 +55,9 @@ local on_attach = function(client, bufnr)
 	end, bufopts)
 end
 
+-- used to enable autocompletion (assign to every lsp server config)
+local capabilities = cmp_nvim_lsp.default_capabilities()
+
 local lsp_flags = {
 	-- This is the default in Nvim 0.7+
 	debounce_text_changes = 150,
