@@ -94,7 +94,7 @@ return require("packer").startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "v3.*" })
 
 	-- code runner
-	use("CRAG666/code_runner.nvim")
+	-- use("CRAG666/code_runner.nvim")
 
 	--tree sitter
 	use("nvim-treesitter/nvim-treesitter")

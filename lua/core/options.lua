@@ -23,7 +23,7 @@ opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
---opt.signcolumn = 'yes'
+opt.signcolumn = 'yes'
 
 --back spaces
 opt.backspace = "indent,eol,start"
