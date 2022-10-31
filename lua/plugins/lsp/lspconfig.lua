@@ -72,7 +72,14 @@ lspconfig["html"].setup({
 })
 
 -- configure typescript server with plugin
-typescript.setup({
+lspconfig["tsserver"].setup({
+	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+	},
+})
+-- c / cpp
+lspconfig["clangd"].setup({
 	server = {
 		capabilities = capabilities,
 		on_attach = on_attach,
