@@ -4,7 +4,7 @@
 
 <h1 align='center'>TREE STRUCTURE FOR CONFIG FILES</h1>
 .<br>
-<p align='center'>
+<p>
 ├── init.lua<br>
 ├── lua<br>
 │   ├── core<br>
