@@ -58,38 +58,56 @@ end
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-local lsp_flags = {
-	-- This is the default in Nvim 0.7+
-	debounce_text_changes = 150,
-}
-require("lspconfig")["pyright"].setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
-})
-require("lspconfig")["tsserver"].setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
-})
--- require("lspconfig")["html-lsp"].setup({
--- 	on_attach = on_attach,
--- 	flags = lsp_flags,
--- })
-require("lspconfig")["rust_analyzer"].setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
-	-- Server-specific settings...
-	settings = {
-		["rust-analyzer"] = {},
-	},
-
-	require("lspconfig")["clangd"].setup({
-		on_attach = on_attach,
-		flags = lsp_flags,
-	}),
-})
 -- Change the Diagnostic symbols in the sign column (gutter)
--- local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
--- for type, icon in pairs(signs) do
--- 	local hl = "DiagnosticSign" .. type
--- 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
--- end
+local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
+-- configure html server
+lspconfig["html"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure typescript server with plugin
+typescript.setup({
+	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+	},
+})
+
+-- configure css server
+lspconfig["cssls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure tailwindcss server
+lspconfig["tailwindcss"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure lua server (with special settings)
+lspconfig["sumneko_lua"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = { -- custom settings for lua
+		Lua = {
+			-- make the language server recognize "vim" global
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				-- make language server aware of runtime files
+				library = {
+					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.stdpath("config") .. "/lua"] = true,
+				},
+			},
+		},
+	},
+})

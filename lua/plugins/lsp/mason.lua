@@ -25,7 +25,7 @@ mason.setup({
 		"tsserver",
 		"html",
 		"cssls",
-		"pyright",
+    "python-lsp-sever",
 		"rust_analyzer",
 		"clangd",
 	},

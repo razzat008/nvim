@@ -63,22 +63,21 @@ return require("packer").startup(function(use)
 	-- indenting lines || autopairs || dashboard
 	use("lukas-reineke/indent-blankline.nvim")
 	use("windwp/nvim-autopairs")
-	-- use("glepnir/dashboard-nvim")
-	--
+
 	--auto completions
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
+
 	-- snippets
-	--
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
-	--
+
 	-- lsp servers management
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-	--
+
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
@@ -93,8 +92,6 @@ return require("packer").startup(function(use)
 	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*" })
 
-	-- code runner
-	-- use("CRAG666/code_runner.nvim")
 
 	--tree sitter
 	use("nvim-treesitter/nvim-treesitter")
