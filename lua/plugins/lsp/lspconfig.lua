@@ -48,7 +48,7 @@ local on_attach = function(client, bufnr)
 	end, bufopts)
 	vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, bufopts)
 	vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
-	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
+	vim.keymap.set("n", "ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 	vim.keymap.set("n", "<space>f", function()
 		vim.lsp.buf.format({ async = true })
@@ -67,6 +67,10 @@ end
 
 -- configure html server
 lspconfig["html"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["rust_analyzer"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

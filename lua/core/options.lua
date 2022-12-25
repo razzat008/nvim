@@ -1,7 +1,11 @@
 local opt = vim.opt -- for options
 
+opt.ruler = true
+
 opt.mouse = "a"
 opt.mousemoveevent = true
+opt.ignorecase = true
+opt.smartcase = true
 opt.wrap = false
 
 --line numbers
@@ -37,3 +41,9 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 vim.notify = require("notify")
+
+-- interval for writing swap file to disk, also used by gitsigns
+opt.updatetime = 250
+
+-- disable nvim intro
+opt.shortmess:append("sI")

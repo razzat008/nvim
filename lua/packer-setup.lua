@@ -92,12 +92,14 @@ return require("packer").startup(function(use)
 	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*" })
 
-
 	--tree sitter
 	use("nvim-treesitter/nvim-treesitter")
 
 	--notification
 	use("rcarriga/nvim-notify")
+
+	-- alpha
+	use("goolord/alpha-nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

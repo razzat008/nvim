@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- shortform
 
 --general keymaps
-
+keymap.set("n", "<leader>/", ':lua require("Comment.api").toggle.linewise.current()<cr><ESC>')
 keymap.set("i", "jk", "<ESC>")
 
 -- clear search highlights
@@ -12,6 +12,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
+
+keymap.set("n", "j", "gj")
+keymap.set("n", "k", "gk")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -23,6 +26,8 @@ keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<C-right>", ":tabn<CR>") --  go to next tab
+keymap.set("n", "<C-s>", ":w<CR>") --   save file
+keymap.set("i", "<C-s>", "<cmd>w<CR>") -- save file
 keymap.set("n", "<C-left>", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
@@ -33,6 +38,7 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 ----------------------
 -- Plugin Keybinds
 ----------------------
+keymap.set("n", ";", ":") -- saving time
 
 -- vim maximizer
 keymap.set("n", "<leader>h", ":MaximizerToggle<CR>") --  toggle/hide windows
@@ -51,7 +57,8 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>") -- list available keymaps
 
 -- buffer management/ bufferline
-keymap.set("n", "<C-q>", "<cmd>close<cr> ")
-keymap.set("n", "<C-q>", "<cmd>bdelete<cr> ")
-keymap.set("n", "<C-right>", ":bn<CR>") --  go to next tab
-keymap.set("n", "<C-left>", ":bp<CR>") --  go to next tab
+keymap.set("n", "<leader>x", "<cmd>bdelete<cr> ") -- close current buffer/tab
+keymap.set("n", "<tab>", "<cmd>BufferLineCycleNext<cr>") --  cycle through tab
+-- keymap.set("n", "<C-left>", ":bp<CR>") --  go to next tab
+-- keymap.set("n", "<C-q>", "<cmd>bdelete<cr> ")
+-- keymap.set("n", "<C-right>", ":bn<CR>") --  go to next tab
