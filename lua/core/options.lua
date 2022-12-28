@@ -17,6 +17,8 @@ opt.tabstop = 2
 opt.autoindent = true
 opt.shiftwidth = 2
 opt.expandtab = true
+opt.timeoutlen = 400
+opt.undofile = true
 
 --search settings
 opt.ignorecase = true
@@ -44,6 +46,3 @@ vim.notify = require("notify")
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
-
--- disable nvim intro
-opt.shortmess:append("sI")
