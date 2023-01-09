@@ -51,7 +51,7 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	--
 	-- lualine (statusline)
-	use("nvim-lualine/lualine.nvim")
+	-- use("nvim-lualine/lualine.nvim")
 	--
 	-- fuzzy finding w/ telescope
 	-- dependency for better sorting performance
@@ -66,7 +66,7 @@ return require("packer").startup(function(use)
 	-- indenting lines || autopairs || dashboard
 	use("lukas-reineke/indent-blankline.nvim")
 	use("windwp/nvim-autopairs")
-	-- use("glepnir/dashboard-nvim")
+	use("glepnir/dashboard-nvim")
 
 	--auto completions
 	use("hrsh7th/nvim-cmp")
