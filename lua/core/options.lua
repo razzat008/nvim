@@ -41,8 +41,11 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
-opt.iskeyword:append("-")
+opt.iskeyword:append("-", "_")
 vim.notify = require("notify")
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
+
+--transparency
+vim.g.transparency = transparency

@@ -38,6 +38,7 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 ----------------------
 -- Plugin Keybinds
 ----------------------
+--local keybindings
 keymap.set("n", ";", ":") -- saving time
 
 -- vim maximizer
