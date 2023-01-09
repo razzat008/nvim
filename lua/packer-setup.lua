@@ -28,6 +28,9 @@ return require("packer").startup(function(use)
 	--
 	-- use ctrl to move around windows
 	use("christoomey/vim-tmux-navigator")
+	-- lightspeed for quick motion
+
+	use("ggandor/lightspeed.nvim")
 	--
 	-- maximizes/minimizes current window
 	use("szw/vim-maximizer")
@@ -63,6 +66,7 @@ return require("packer").startup(function(use)
 	-- indenting lines || autopairs || dashboard
 	use("lukas-reineke/indent-blankline.nvim")
 	use("windwp/nvim-autopairs")
+	-- use("glepnir/dashboard-nvim")
 
 	--auto completions
 	use("hrsh7th/nvim-cmp")
