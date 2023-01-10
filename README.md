@@ -1,5 +1,5 @@
 <h1 align='center'>Installation</h1>
-**git clone https://github.com/ceaser008/nvim ~/.config/nvim --depth 1 && nvim**
+git clone https://github.com/ceaser008/nvim ~/.config/nvim --depth 1 && nvim
 <br>
 
 <h1 align='center'>TREE STRUCTURE FOR CONFIG FILES</h1>

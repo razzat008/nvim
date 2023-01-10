@@ -20,49 +20,48 @@ vim.cmd([[
 local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
+	--plugins manager
 	use("wbthomason/packer.nvim")
+
 	--theme/colorscheme
 	use("folke/tokyonight.nvim")
 	use("morhetz/gruvbox")
 	use("Soares/base16.nvim")
-	--
+
 	-- use ctrl to move around windows
 	use("christoomey/vim-tmux-navigator")
-	-- lightspeed for quick motion
 
+	-- lightspeed for quick motion
 	use("ggandor/lightspeed.nvim")
-	--
+
 	-- maximizes/minimizes current window
 	use("szw/vim-maximizer")
-	--
+
 	-- surround specific words with anything
 	use("tpope/vim-surround")
 	--
 	-- use gcc to comment line
 	use("numToStr/Comment.nvim")
-	--
+
 	-- provides functions in lua
 	use("nvim-lua/plenary.nvim")
-	--
+
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
-	--
 	-- icons
 	use("kyazdani42/nvim-web-devicons")
-	--
-	-- lualine (statusline)
-	-- use("nvim-lualine/lualine.nvim")
-	--
+
 	-- fuzzy finding w/ telescope
 	-- dependency for better sorting performance
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-	--
+
 	-- fuzzy finder
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
-	--
+
 	--colorizer
 	use("norcalli/nvim-colorizer.lua")
 	--
+
 	-- indenting lines || autopairs || dashboard
 	use("lukas-reineke/indent-blankline.nvim")
 	use("windwp/nvim-autopairs")
