@@ -24,6 +24,7 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	--theme/colorscheme
+	use("Mofiqul/dracula.nvim")
 	use("folke/tokyonight.nvim")
 	use("morhetz/gruvbox")
 	use("Soares/base16.nvim")
