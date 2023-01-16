@@ -13,12 +13,12 @@ bufferline.setup({
 		offsets = {
 			{
 				filetype = "NvimTree",
-				text = "Ntree",
+				text = "File Explorer",
 				highlight = "Directory",
 				separator = true, -- use a "true" to enable the default, or set your own character
 			},
 		},
-		separator_style = "slant",
+		separator_style = "thin",
 		hover = {
 			enabled = true,
 			delay = 200,
