@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- shortform
 
 --general keymaps
-keymap.set("n", "<leader>/", ':lua require("Comment.api").toggle.linewise.current()<cr><ESC>')
+keymap.set("n", "<leader>/", '<cmd>lua require("Comment.api").toggle.linewise.current()<cr><silent><ESC>')
 keymap.set("i", "jk", "<ESC>")
 
 -- clear search highlights
@@ -46,7 +46,7 @@ keymap.set("n", "<leader>h", ":MaximizerToggle<CR>") --  toggle/hide windows
 
 -- nvim-tree
 -- keymap.set("n", "<leader>n", ":NvimTreeFocus<CR>") -- toggle file explorer
-keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>") -- change focus explorer
+keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR><silent>") -- change focus explorer
 
 -- telescope | fzf
 -- keymap.set("n", "<leader>fa", "<cmd>FZF<cr>") -- find files within current working directory, respects .gitignore
