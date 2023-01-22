@@ -105,6 +105,9 @@ return require("packer").startup(function(use)
 	-- alpha
 	use("goolord/alpha-nvim")
 
+	--laTex
+	-- use("lervag/vimtex")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

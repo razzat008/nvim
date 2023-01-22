@@ -21,12 +21,17 @@ function status_line()
 		"%#StatusLeft#",
 		"%f",
 		"%=",
-		"%#StatusMid#",
-		"%l,",
-		get_column_number(),
-		"%=",
+		-- "%#StatusMid#",
+		-- "%l,",
+		-- get_column_number(),
+		-- "%=",
 		"%#StatusRight#",
 		"%p%%",
+		"   ",
+		"%l,",
+		get_column_number(),
+		-- "%=",
+		-- "%p%%",
 	})
 end
 
