@@ -63,6 +63,7 @@ keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>") -- list available ke
 -- buffer management/ bufferline
 keymap.set("n", "<leader>x", "<cmd>bdelete<cr> ") -- close current buffer/tab
 keymap.set("n", "<tab>", "<cmd>BufferLineCycleNext<cr>") --  cycle through tab
+keymap.set("n", "<S-tab>", "<cmd>BufferLineCyclePrev<cr>") --  cycle through tab
 -- keymap.set("n", "<C-left>", ":bp<CR>") --  go to next tab
 -- keymap.set("n", "<C-q>", "<cmd>bdelete<cr> ")
 -- keymap.set("n", "<C-right>", ":bn<CR>") --  go to next tab
