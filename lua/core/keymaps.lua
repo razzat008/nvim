@@ -6,6 +6,7 @@ local keymap = vim.keymap -- shortform
 --general keymaps
 keymap.set("n", "<leader>/", '<cmd>lua require("Comment.api").toggle.linewise.current()<cr><silent><ESC>')
 keymap.set("i", "jk", "<ESC>")
+keymap.set("n", "<ESC>", ":nohl<cr><ESC><silent>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -15,6 +16,8 @@ keymap.set("n", "x", '"_x')
 
 keymap.set("n", "j", "gj")
 keymap.set("n", "k", "gk")
+-- keymap.set("n", "0", "g0")
+-- keymap.set("n", "$", "g$")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
