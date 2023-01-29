@@ -25,9 +25,6 @@ return require("packer").startup(function(use)
 
 	--theme/colorscheme
 	use("Mofiqul/dracula.nvim")
-	use("folke/tokyonight.nvim")
-	use("morhetz/gruvbox")
-	use("Soares/base16.nvim")
 
 	-- use ctrl to move around windows
 	use("christoomey/vim-tmux-navigator")
@@ -66,7 +63,6 @@ return require("packer").startup(function(use)
 	-- indenting lines || autopairs || dashboard
 	use("lukas-reineke/indent-blankline.nvim")
 	use("windwp/nvim-autopairs")
-	use("glepnir/dashboard-nvim")
 
 	--auto completions
 	use("hrsh7th/nvim-cmp")
@@ -101,12 +97,6 @@ return require("packer").startup(function(use)
 
 	--notification
 	use("rcarriga/nvim-notify")
-
-	-- alpha
-	use("goolord/alpha-nvim")
-
-	--laTex
-	-- use("lervag/vimtex")
 
 	if packer_bootstrap then
 		require("packer").sync()
