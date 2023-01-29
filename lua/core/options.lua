@@ -1,6 +1,7 @@
 local opt = vim.opt -- for options
 
 opt.ruler = true
+opt.undofile = true
 
 opt.mouse = "a"
 opt.mousemoveevent = true
@@ -46,3 +47,4 @@ vim.notify = require("notify")
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
+-- opt.shortmess:append("sI")
