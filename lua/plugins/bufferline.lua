@@ -13,9 +13,13 @@ bufferline.setup({
 		offsets = {
 			{
 				filetype = "NvimTree",
-				text = "Nvim by razzat",
+				-- text = "Nvim by razzat",
+				text = function()
+					return vim.fn.getcwd()
+				end,
 				highlight = "Directory",
-				separator = true, -- use a "true" to enable the default, or set your own character
+				text_align = "left",
+				-- separator = true, -- use a "true" to enable the default, or set your own character
 			},
 		},
 		separator_style = "thin",

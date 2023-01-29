@@ -46,6 +46,7 @@ return require("packer").startup(function(use)
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
+
 	-- icons
 	use("kyazdani42/nvim-web-devicons")
 
@@ -58,7 +59,6 @@ return require("packer").startup(function(use)
 
 	--colorizer
 	use("norcalli/nvim-colorizer.lua")
-	--
 
 	-- indenting lines || autopairs || dashboard
 	use("lukas-reineke/indent-blankline.nvim")
@@ -87,7 +87,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	-- use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*" })

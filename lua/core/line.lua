@@ -26,10 +26,10 @@ function status_line()
 		-- get_column_number(),
 		-- "%=",
 		"%#StatusRight#",
-		"%p%%",
-		"   ",
 		"%l,",
 		get_column_number(),
+		"   ",
+		"%p%%",
 		-- "%=",
 		-- "%p%%",
 	})

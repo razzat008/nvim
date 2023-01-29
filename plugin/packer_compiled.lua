@@ -129,11 +129,6 @@ _G.packer_plugins = {
     path = "/home/ceaser/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
     url = "https://github.com/ggandor/lightspeed.nvim"
   },
-  ["lspkind.nvim"] = {
-    loaded = true,
-    path = "/home/ceaser/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
-    url = "https://github.com/onsails/lspkind.nvim"
-  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/ceaser/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
