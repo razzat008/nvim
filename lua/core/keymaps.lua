@@ -5,8 +5,9 @@ local keymap = vim.keymap -- shortform
 
 --general keymaps
 keymap.set("n", "<leader>/", '<cmd>lua require("Comment.api").toggle.linewise.current()<cr><silent><ESC>')
-keymap.set("i", "jk", "<ESC>")
-keymap.set("n", "<ESC>", ":nohl<cr><ESC><silent>")
+keymap.set("v", "<leader>/", "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>")
+-- keymap.set("i", "jk", "<ESC>")
+keymap.set("n", "<ESC>", "<cmd> noh <CR>") -- remove highlights when escape key is pressed
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -45,7 +46,7 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 keymap.set("n", ";", ":") -- saving time
 
 -- vim maximizer
-keymap.set("n", "<leader>h", ":MaximizerToggle<CR>") --  toggle/hide windows
+keymap.set("n", "<leader>h", ":MaximizerToggle<CR><silent>") --  toggle/hide windows
 
 -- nvim-tree
 -- keymap.set("n", "<leader>n", ":NvimTreeFocus<CR>") -- toggle file explorer
@@ -55,10 +56,16 @@ keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR><silent>") -- change focus expl
 -- keymap.set("n", "<leader>fa", "<cmd>FZF<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
+-- keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>") -- list available keymaps
+keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>") -- list recently opened files
+keymap.set("n", "<leader>j", "<cmd>Telescope quickfix<cr>") -- list recently opened files
+
+-- git
+keymap.set("n", "<leader>cm", "<cmd>Telescope git_commits<cr>") -- git commits
+keymap.set("n", "<leader>gt", "<cmd>Telescope git_status<cr>") -- git status
 
 -- buffer management/ bufferline
 keymap.set("n", "<leader>x", "<cmd>bdelete<cr> ") -- close current buffer/tab
