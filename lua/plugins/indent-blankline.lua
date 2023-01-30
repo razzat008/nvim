@@ -6,7 +6,7 @@ local opt = vim.opt
 
 opt.list = true
 -- to show the end of a line
-opt.listchars:append("eol:↴")
+-- opt.listchars:append("eol:↴")
 opt.listchars:append("space:⋅")
 comment.setup({
 	show_current_context = true,
