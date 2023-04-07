@@ -1,4 +1,4 @@
-require("razzat.mappings")
+require("razzat.keymaps")
 require("razzat.options")
 
 --custom command for peek.nvim
