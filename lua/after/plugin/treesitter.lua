@@ -1,4 +1,4 @@
-local present, treesitter = pcall(require,"treesitter")
+local setup, treesiter = pcall(require, "nvim-treesitter")
 
 if not present then
 	return
@@ -26,3 +26,7 @@ highlight = {
 }
 
 treesitter.setup(options)
+if not setup then
+	return
+end
+
