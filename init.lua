@@ -21,8 +21,9 @@ local plugins = {
 		config = function()
 			require("after.plugin.telescope")
 		end,
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
-		dependencies = { 'nvim-lua/plenary.nvim' }
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.1",
+		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
 	--markdown
@@ -38,13 +39,14 @@ local plugins = {
 	--easy navigation
 	{
 		"ggandor/lightspeed.nvim",
-		lazy= true,
-		enabled = true,
+		lazy = true,
+		enabled = false,
 		config = function()
 			require("after.plugin.lightspeed")
 		end,
 	},
 
+	-- undotree
 	{
 		"mbbill/undotree",
 		keys = "<leader>u",
@@ -54,5 +56,65 @@ local plugins = {
 		end,
 	},
 
+	-- colorscheme
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			require("after.plugin.colors")
+		end,
+	},
+
+	-- syntax highlighting
+	{
+		"nvim-treesitter/nvim-treesitter",
+		cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+		build = ":TSUpdate",
+		config = function()
+			require("after.plugin.treesitter")
+		end,
+	},
+
+	-- idk
+	{
+		"nvim-treesitter/playground",
+	},
+
+	-- harpoon
+	{
+		"ThePrimeagen/harpoon",
+		event = "BufEnter",
+		config = function()
+			require("after.plugin.harpoon")
+		end,
+	},
+
+
+    {
+  'VonHeikemen/lsp-zero.nvim',
+  config = function()
+      require("after.plugin.lsp-zero")
+  end,
+  branch = 'v2.x',
+  dependencies = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+    {
+        "williamboman/mason.nvim",
+        config = function()
+            require("after.plugin.mason")
+        end,
+    },
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
+  }
+}
+
+
+	-- lsp support
 }
 require("lazy").setup(plugins)
