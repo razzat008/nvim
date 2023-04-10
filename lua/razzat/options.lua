@@ -37,3 +37,5 @@ o.isfname:append("@-@")
 o.updatetime = 50
 
 o.colorcolumn = "80"
+
+o.completeopt = 'menuone,noselect'
