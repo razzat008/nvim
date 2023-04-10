@@ -16,12 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	{
+		"nvim-telescope/telescope.nvim",
 		enabled = true,
 		event = "BufEnter",
 		config = function()
 			require("after.plugin.telescope")
 		end,
-		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
@@ -67,7 +67,7 @@ local plugins = {
     
     --transparency
 	{
-		"xiyaowong/nvim-transparent",
+--		"xiyaowong/nvim-transparent",
 	},
 
 	-- syntax highlighting
@@ -103,6 +103,29 @@ local plugins = {
      end,
  },
 
+ 
+ {
+  'VonHeikemen/lsp-zero.nvim',
+  branch = 'v2.x',
+  dependencies = {
+    -- LSP Support
+    {'neovim/nvim-lspconfig'},             -- Required
+    {                                      -- Optional
+      'williamboman/mason.nvim',
+      build = function()
+        pcall(vim.cmd, 'MasonUpdate')
+      end,
+    },
+    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+    -- Autocompletion
+    {'hrsh7th/nvim-cmp'},     -- Required
+    {'hrsh7th/cmp-nvim-lsp'}, -- Required
+    {'L3MON4D3/LuaSnip'},     -- Required
+  }
+},
 
 }
+
 require("lazy").setup(plugins)
+
