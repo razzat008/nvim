@@ -1,3 +1,7 @@
+require('rose-pine').setup({
+    disable_backgroud = true
+})
+
 function colormyvim(color)
 	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
@@ -7,4 +11,4 @@ function colormyvim(color)
 	vim.api.nvim_set_hl(0, "InsertFloat", {bg = "none"})
 
 end
--- colormyvim()
+colormyvim()
