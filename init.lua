@@ -64,6 +64,11 @@ local plugins = {
 			require("after.plugin.colors")
 		end,
 	},
+    
+    --transparency
+	{
+		"xiyaowong/nvim-transparent",
+	},
 
 	-- syntax highlighting
 	{
@@ -90,31 +95,14 @@ local plugins = {
 	},
 
 
-    {
-  'VonHeikemen/lsp-zero.nvim',
-  config = function()
-      require("after.plugin.lsp-zero")
-  end,
-  branch = 'v2.x',
-  dependencies = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-    {
-        "williamboman/mason.nvim",
-        config = function()
-            require("after.plugin.mason")
-        end,
-    },
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
-  }
-}
+ -- statusline
+ {
+     'nvim-lualine/lualine.nvim',
+     config = function()
+         require "after.plugin.lualine"
+     end,
+ },
 
 
-	-- lsp support
 }
 require("lazy").setup(plugins)
