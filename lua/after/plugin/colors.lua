@@ -7,4 +7,4 @@ function colormyvim(color)
 	vim.api.nvim_set_hl(0, "InsertFloat", {bg = "none"})
 
 end
-colormyvim()
+-- colormyvim()
