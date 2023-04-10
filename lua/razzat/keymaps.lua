@@ -1,16 +1,18 @@
+local vmap = vim.keymap.set
+
 -- basic mappings
 vim.g.mapleader = " "
-vim.keymap.set("n","<leader>e",vim.cmd.Ex)
-vim.keymap.set("n",";",":")
+vmap("n","<leader>e",vim.cmd.Ex)
+vmap("n",";",":")
 
 --allow moving the cursor through wrapped lines
 
-vim.keymap.set("n","j","gj")
-vim.keymap.set("n","k","gk")
+vmap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vmap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 
 --switching between windows
-vim.keymap.set("n","<c-l>","<c-w>l")
-vim.keymap.set("n","<c-h>","<c-w>h")
-vim.keymap.set("n","<c-j>","<c-w>j")
-vim.keymap.set("n","<c-k>","<c-w>k")
+vmap("n","<c-l>","<c-w>l")
+vmap("n","<c-h>","<c-w>h")
+vmap("n","<c-j>","<c-w>j")
+vmap("n","<c-k>","<c-w>k")
