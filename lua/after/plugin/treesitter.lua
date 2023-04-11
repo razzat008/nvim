@@ -1,4 +1,4 @@
-local setup, treesiter = pcall(require, "nvim-treesitter")
+local present, treesitter = pcall(require, "nvim-treesitter")
 
 if not present then
 	return
@@ -6,7 +6,6 @@ end
 
 local options = {
 	auto_install = true,
-
 	ensure_installed = { "c",
 	"lua",
 	"vim",
@@ -26,7 +25,3 @@ highlight = {
 }
 
 treesitter.setup(options)
-if not setup then
-	return
-end
-
