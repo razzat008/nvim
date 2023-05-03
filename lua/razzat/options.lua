@@ -1,7 +1,5 @@
 local o = vim.opt
 local g = vim.g
-keymap = vim.keymap.set
-
 
 -- other options
 o.wrap = false
@@ -17,8 +15,6 @@ o.shiftwidth = 4
 o.expandtab = true
 
 o.smartindent = true
-
-o.wrap = false
 
 o.swapfile = true
 o.backup = false

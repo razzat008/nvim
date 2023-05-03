@@ -1,1 +1,1 @@
-keymap("n", "<leader>u",vim.cmd.UndotreeToggle)
+vmap("n", "<leader>u",vim.cmd.UndotreeToggle)

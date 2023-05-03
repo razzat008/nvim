@@ -1,4 +1,4 @@
-local vmap = vim.keymap.set
+vmap = vim.keymap.set
 
 -- basic mappings
 vim.g.mapleader = " "

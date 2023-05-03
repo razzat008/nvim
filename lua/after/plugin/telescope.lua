@@ -61,11 +61,11 @@ local options = {
 }
 
 -- telescope mappings
-keymap("n","<leader>ff",builtin.find_files)
-keymap("n","<leader>fa","<cmd> Telescope find_files follow=true hidden=true no_ignore=true<cr>")
-keymap("n","<leader>fo",builtin.oldfiles)
-keymap("n","<leader>fb",builtin.buffers)
-keymap('n','<leader>fw', function()
+vmap("n","<leader>ff",builtin.find_files)
+vmap("n","<leader>fa","<cmd> Telescope find_files follow=true hidden=true no_ignore=true<cr>")
+vmap("n","<leader>fo",builtin.oldfiles)
+vmap("n","<leader>fb",builtin.buffers)
+vmap('n','<leader>fw', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
