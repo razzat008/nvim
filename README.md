@@ -1,1 +1,1 @@
-# NVIM configuration inspired from "THE PRIMEAGEN"
+### do what you want with these
