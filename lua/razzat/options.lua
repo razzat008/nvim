@@ -33,6 +33,7 @@ o.termguicolors = true
 o.scrolloff = 8
 o.signcolumn = "yes"
 o.isfname:append("@-@")
+o.iskeyword:append("-", "_")
 
 o.updatetime = 50
 

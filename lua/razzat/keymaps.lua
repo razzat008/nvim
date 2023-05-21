@@ -1,38 +1,38 @@
-local vmap = vim.keymap.set
+local map = vim.keymap.set
 
 -- basic mappings
 vim.g.mapleader = " "
-vmap("n","<leader>e",vim.cmd.Ex)
-vmap("n",";",":")
+map("n","<leader>e",vim.cmd.Ex)
+map("n",";",":")
 
-vmap("n", "<C-d>", "<C-d>zz")
-vmap("n", "<C-u>", "<C-u>zz")
-vmap("n", "n", "nzzzv")
-vmap("n", "N", "Nzzzv")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
 --allow moving the cursor through wrapped lines
 
-vmap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vmap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 
 --switching between windows
-vmap("n","<c-l>","<c-w>l")
-vmap("n","<c-h>","<c-w>h")
-vmap("n","<c-j>","<c-w>j")
-vmap("n","<c-k>","<c-w>k")
+map("n","<c-l>","<c-w>l")
+map("n","<c-h>","<c-w>h")
+map("n","<c-j>","<c-w>j")
+map("n","<c-k>","<c-w>k")
 
 -- shift q sucks
-vmap("n","Q","<nop>")
+map("n","Q","<nop>")
 
 -- greatest remap ever
-vmap("x", "<leader>p", [["_dP]])
+map("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vmap({"n", "v"}, "<leader>y", [["+y]])
-vmap("n", "<leader>Y", [["+Y]])
+map({"n", "v"}, "<leader>y", [["+y]])
+map("n", "<leader>Y", [["+Y]])
 
-vmap({"n", "v"}, "<leader>d", [["_d]])
+map({"n", "v"}, "<leader>d", [["_d]])
 
-vmap("n", "<leader><leader>", function()
+map("n", "<leader><leader>", function()
     vim.cmd("so")
 end)

@@ -1,0 +1,9 @@
+{
+    "diagnostics.globals": [
+        "keymap",
+        "vim"
+    ],
+    "diagnostics.disable": [
+        "unused-local"
+    ]
+}
