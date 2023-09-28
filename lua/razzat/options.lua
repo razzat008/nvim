@@ -12,6 +12,7 @@ o.nu = true
 o.rnu = true
 
 o.tabstop = 4
+o.cursorline = true
 o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
@@ -36,7 +37,6 @@ o.isfname:append("@-@")
 o.iskeyword:append("-", "_")
 
 o.updatetime = 50
-
 o.colorcolumn = "80"
 
 o.completeopt = 'menuone,noselect'
