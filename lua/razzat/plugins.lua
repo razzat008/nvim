@@ -1,5 +1,4 @@
 return {
-<<<<<<< HEAD
     {
         "nvim-telescope/telescope.nvim",
         enabled = true,
@@ -68,108 +67,86 @@ return {
         end,
     },
 
-    -- lsp 
+    -- telescope 
     {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        "nvim-telescope/telescope.nvim",
+        enabled = true,
+        event = "BufEnter",
+        config = function()
+            require("after.plugin.telescope")
+        end,
+        tag = "0.1.1",
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
-        }
-    }
-=======
-	{
-		"nvim-telescope/telescope.nvim",
-			enabled = true,
-			event = "BufEnter",
-			config = function()
-				require("after.plugin.telescope")
-				end,
-			tag = "0.1.1",
-			dependencies = { "nvim-lua/plenary.nvim" },
-	},
+    --markdown
+    {
+        "toppair/peek.nvim",
+        ft = { "markdown" },
+        build = "deno task --quiet build:fast",
+        enabled = true,
+        config = function()
+            require("after.plugin.peek")
+        end,
+    },
 
-		--markdown
-		{
-			"toppair/peek.nvim",
-			ft = { "markdown" },
-			build = "deno task --quiet build:fast",
-			enabled = true,
-			config = function()
-				require("after.plugin.peek")
-				end,
-		},
+    -- undotree
+    {
+        "mbbill/undotree",
+        keys = "<leader>u",
+        event = "BufEnter",
+        config = function()
+            require("after.plugin.undotree")
+        end,
+    },
 
-		-- undotree
-		{
-			"mbbill/undotree",
-			keys = "<leader>u",
-			event = "BufEnter",
-			config = function()
-				require("after.plugin.undotree")
-				end,
-		},
+    -- colorscheme
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            require("after.plugin.colors")
+        end,
+    },
 
-		-- colorscheme
-		{
-			"rose-pine/neovim",
-			name = "rose-pine",
-			config = function()
-				require("after.plugin.colors")
-				end,
-		},
+    --transparency
+    {
+        --		"xiyaowong/nvim-transparent",
+    },
 
-		--transparency
-		{
-			--		"xiyaowong/nvim-transparent",
-		},
+    -- syntax highlighting
+    {
+        "nvim-treesitter/nvim-treesitter",
+        cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+        build = ":TSUpdate",
+        config = function()
+            require("after.plugin.treesitter")
+        end,
+    },
 
-		-- syntax highlighting
-		{
-			"nvim-treesitter/nvim-treesitter",
-			cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-			build = ":TSUpdate",
-			config = function()
-				require("after.plugin.treesitter")
-				end,
-		},
+    -- harpoon
+    {
+        "ThePrimeagen/harpoon",
+        event = "BufEnter",
+        config = function()
+            require("after.plugin.harpoon")
+        end,
+    },
 
-		-- idk
-		{
-			"nvim-treesitter/playground",
-		},
+    -- statusline
+    {
+        "nvim-lualine/lualine.nvim",
+        config = function()
+            require("after.plugin.lualine")
+        end,
+    },
 
-		-- harpoon
-		{
-			"ThePrimeagen/harpoon",
-			event = "BufEnter",
-			config = function()
-				require("after.plugin.harpoon")
-				end,
-		},
+    -- vimwiki for taking notes within vim
+    {
+        "vimwiki/vimwiki",
+        config = function()
+            require("after.plugin.vimwiki")
+        end,
 
-		-- statusline
-		{
-			"nvim-lualine/lualine.nvim",
-			config = function()
-				require("after.plugin.lualine")
-				end,
-		},
-
-		-- vimwiki for taking notes within vim
-		{
-			"vimwiki/vimwiki",
-			config = function()
-				require("after.plugin.vimwiki")
-			end,
-
-		},
->>>>>>> 2cd48e332700770799cec30df0d767fb4d33e905
+    },
 }
