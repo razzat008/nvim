@@ -1,7 +1,7 @@
-local map = vim.keymap.set
+map = vim.keymap.set
 
 -- basic mappings
-vim.g.mapleader = " "
+vim.g.mapleader = " " -- setting the leader key
 map("n","<leader>e",vim.cmd.Ex)
 map("n",";",":")
 

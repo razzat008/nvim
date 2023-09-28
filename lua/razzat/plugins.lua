@@ -10,17 +10,6 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
-    --markdown
-    {
-        "toppair/peek.nvim",
-        ft = { "markdown" },
-        build = "deno task --quiet build:fast",
-        enabled = false,
-        config = function()
-            require("after.plugin.peek")
-        end,
-    },
-
     -- undotree
     {
         "mbbill/undotree",
@@ -62,6 +51,7 @@ return {
     -- statusline
     {
         "nvim-lualine/lualine.nvim",
+        enabled = true,
         config = function()
             require("after.plugin.lualine")
         end,
@@ -77,17 +67,6 @@ return {
         end,
         tag = "0.1.1",
         dependencies = { "nvim-lua/plenary.nvim" },
-    },
-
-    --markdown
-    {
-        "toppair/peek.nvim",
-        ft = { "markdown" },
-        build = "deno task --quiet build:fast",
-        enabled = true,
-        config = function()
-            require("after.plugin.peek")
-        end,
     },
 
     -- undotree
@@ -149,4 +128,24 @@ return {
         end,
 
     },
+
+    -- to comment lines
+    {
+        'numToStr/Comment.nvim',
+        opts = {
+            -- add any options here
+        },
+        lazy = false,
+    },
+
+    -- lsp magic
+
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            require("after.plugin.lspconfig")
+        end,
+    },
+
+
 }
